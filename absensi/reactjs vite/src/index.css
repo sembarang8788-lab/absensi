@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #f8fafc;
+  /* bg-slate-50 */
+  color: #0f172a;
+  /* text-slate-900 */
+  margin: 0;
+  min-height: 100vh;
+}
+
+.sidebar-active {
+  background-color: #f0fdf4;
+  color: #15803d;
+  border-right: 4px solid #16a34a;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+/* Page content transitions if needed, though handled by React state now */
+.page-content {
+  display: block;
+}
+
+/* Remove default Vite styles */
+:root {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
