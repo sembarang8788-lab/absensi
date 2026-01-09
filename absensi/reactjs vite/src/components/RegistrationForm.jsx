@@ -11,7 +11,9 @@ const RegistrationForm = ({ onNavigate }) => {
         nama_ayah: '',
         gelombang_id: '43',
         ikut_silat: true,
-        alamat: ''
+        alamat: '',
+        deskripsi: '',
+
     });
     const [file, setFile] = useState(null);
 
@@ -91,6 +93,17 @@ const RegistrationForm = ({ onNavigate }) => {
                                 name="nama_lengkap"
                                 required
                                 value={formData.nama_lengkap}
+                                onChange={handleChange}
+                                className="w-full px-4 py-3 rounded-xl border border-slate-200 outline-none focus:ring-2 focus:ring-green-500"
+                            />
+                        </div>
+                        <div>
+                            <label className="block text-sm font-semibold mb-2">Deskripsi</label>
+                            <textarea
+                                type="text"
+                                name="deskripsi"
+                                required
+                                value={formData.deskripsi}
                                 onChange={handleChange}
                                 className="w-full px-4 py-3 rounded-xl border border-slate-200 outline-none focus:ring-2 focus:ring-green-500"
                             />

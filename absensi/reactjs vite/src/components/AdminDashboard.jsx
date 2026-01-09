@@ -4,7 +4,7 @@ import StudentList from './StudentList';
 import AttendanceInput from './AttendanceInput';
 import AnalyticsDashboard from './AnalyticsDashboard';
 
-const AdminDashboard = ({ onStudentClick }) => {
+const AdminDashboard = ({ onStudentClick, refreshKey }) => {
     const [activeTab, setActiveTab] = useState('data-silat');
     const [gelombang, setGelombang] = useState('43');
 
@@ -29,7 +29,7 @@ const AdminDashboard = ({ onStudentClick }) => {
                                     <option value="44">Gelombang 44</option>
                                 </select>
                             </div>
-                            <StudentList gelombang={gelombang} onStudentClick={onStudentClick} />
+                            <StudentList gelombang={gelombang} onStudentClick={onStudentClick} refreshKey={refreshKey} />
                         </div>
                     )}
                     {activeTab === 'absensi-silat' && <AttendanceInput />}

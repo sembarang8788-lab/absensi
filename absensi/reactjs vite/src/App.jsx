@@ -10,6 +10,11 @@ import './App.css';
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [selectedSantri, setSelectedSantri] = useState(null);
+  const [refreshKey, setRefreshKey] = useState(0);
+
+  const handleUpdate = () => {
+    setRefreshKey(prev => prev + 1);
+  };
 
   const handleBackup = async () => {
     try {
@@ -73,7 +78,7 @@ function App() {
       <main className="pt-16 min-h-screen">
         {currentPage === 'home' && <Home onNavigate={setCurrentPage} />}
         {currentPage === 'pendaftaran' && <RegistrationForm onNavigate={setCurrentPage} />}
-        {currentPage === 'admin-dashboard' && <AdminDashboard onStudentClick={setSelectedSantri} />}
+        {currentPage === 'admin-dashboard' && <AdminDashboard onStudentClick={setSelectedSantri} refreshKey={refreshKey} />}
       </main>
 
       {selectedSantri && (
@@ -81,6 +86,7 @@ function App() {
           santri={selectedSantri}
           onClose={() => setSelectedSantri(null)}
           supabaseClient={supabase}
+          onUpdate={handleUpdate}
         />
       )}
     </div>

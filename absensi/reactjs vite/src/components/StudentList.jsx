@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from '../lib/supabase';
 
-const StudentList = ({ gelombang, onStudentClick }) => {
+const StudentList = ({ gelombang, onStudentClick, refreshKey }) => {
     const [students, setStudents] = useState([]);
     const [loading, setLoading] = useState(false);
 
@@ -22,7 +22,7 @@ const StudentList = ({ gelombang, onStudentClick }) => {
         };
 
         fetchStudents();
-    }, [gelombang]);
+    }, [gelombang, refreshKey]);
 
     return (
         <div className="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-x-auto">

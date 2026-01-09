@@ -12,7 +12,7 @@ const Home = ({ onNavigate }) => {
                 </h1>
                 <p className="mt-6 text-slate-600 max-w-xl mx-auto text-lg">
                     Manajemen data santri dan absensi latihan serta kegiatan terpadu Perguruan Chaqqulloh.
-                </p>  
+                </p>
                 <div className="mt-10 flex flex-wrap justify-center gap-4">
                     <button
                         onClick={() => onNavigate('pendaftaran')}
@@ -29,10 +29,10 @@ const Home = ({ onNavigate }) => {
                 </div>
 
                 <div className="mt-4 -mt-6">
-                    <Sponsors logos={[ '/public/sponsor-1.jpeg', '/public/sponsor-2.jpeg', '/public/sponsor-3.jpeg', '/public/sponsor-4.jpeg', '/public/sponsor-5.jpeg', '/public/sponsor-6.jpeg', '/public/sponsor-7.jpeg' ]} />
+                    <Sponsors logos={['/public/sponsor-1.jpeg', '/public/sponsor-2.jpeg', '/public/sponsor-3.jpeg', '/public/sponsor-4.jpeg', '/public/sponsor-5.jpeg', '/public/sponsor-6.jpeg', '/public/sponsor-7.jpeg']} />
                 </div>
                 <div className="mt-2 -mt-4">
-                    <Sponsors direction="right" logos={[ '/public/sponsor-1.jpeg', '/public/sponsor-2.jpeg', '/public/sponsor-3.jpeg', '/public/sponsor-4.jpeg', '/public/sponsor-5.jpeg', '/public/sponsor-6.jpeg', '/public/sponsor-7.jpeg' ]} />
+                    <Sponsors direction="right" logos={['/public/2.jpeg', '/public/3.jpeg', '/public/4.jpeg', '/public/5.jpeg', '/public/6.jpeg', '/public/7.jpeg', '/public/8.jpeg']} />
                 </div>
             </div>
         </section>
